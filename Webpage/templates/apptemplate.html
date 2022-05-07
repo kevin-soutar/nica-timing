@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <title>NJICL Timing {% block title %}{% endblock %}</title>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <ul class="header wrap">
+        <li class="logo"><a href="/"><img src="{{ url_for('static', filename='images/NJWordmarkNICA.png') }}" alt="Avatar" class="avatar" height="70vh"></a></li>
+        <li class="usermenu">
+            <div class="dropdown">
+                <button class="dropbtn">Welcome {{firstname}} {{lastname}}</button>
+                <div class="dropdown-content">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>

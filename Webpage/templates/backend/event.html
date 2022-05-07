@@ -1,0 +1,19 @@
+{% extends "apptemplate.html" %}
+{% block title %}Backend{% endblock %}
+{% block head %}
+<script src="{{url_for('static', filename='js/racer.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="center-class" onload="CreateTableFromJSON()">
+    <div class="dual-column">
+        <div class="horizantal-bar">
+            <select id="category" name="category" onload="CreateDropdownFromJSON()"></select>
+            <input type="button" onclick="CreateTableFromJSON()" value="Rebuild Table" />
+        </div>
+        <div>
+            <table id="table" align = "center" border="1px"></table>
+        </div>
+    </div>
+</div> 
+{% endblock %}

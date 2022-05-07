@@ -1,0 +1,14 @@
+{% extends "apptemplate.html" %}
+{% block title %}Backend{% endblock %}
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<ul class="appbuttons" wrap">
+    <li class="routerconfig">
+        <div class routerconfig>
+            <button class="appicon" onclick="document.location='/backend/'"><img src="{{ url_for('static', filename='images/stopwatch-png.webp') }}" height="90vh">Timing Backend</button>
+        </div>
+    </li>
+</ul>
+{% endblock %}
